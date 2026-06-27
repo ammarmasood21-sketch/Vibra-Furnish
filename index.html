@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibraFurnish | Cyber-Organic Blueprint Showcase</title>
+  <meta name="description" content="Experience VibraFurnish - the ultimate destination for premium, high-fidelity furniture. Featuring cutting-edge 3D exploded designs, biophilic colorways, and global blueprint deliveries.">
+  
+  <!-- Google Fonts: Outfit for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-sage">
+  <!-- Glowing Cursor & Blueprint Coordinates Track -->
+  <div id="cursor-glow"></div>
+  <div id="blueprint-coords">[X: 000, Y: 000]</div>
+
+  <!-- Header Navigation -->
+  <header id="main-header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">VIBRA</span>FURNISH
+      </a>
+      
+      <nav class="navbar">
+        <a href="#home" class="nav-link active" id="nav-home">Home</a>
+        <a href="#showcase" class="nav-link" id="nav-showcase">Showcase</a>
+        <a href="#products" class="nav-link" id="nav-products">Products</a>
+        <a href="#about" class="nav-link" id="nav-about">About Us</a>
+        <a href="#delivery-map" class="nav-link" id="nav-map">Logistics Vector</a>
+        <a href="#contact" class="nav-link" id="nav-contact">Reach Out</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <a href="#products" class="btn btn-nav">Explore Blueprint</a>
+        <button class="cart-btn" id="cart-btn" aria-label="View Shopping Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-btn" aria-label="Toggle Menu">
+          <!-- Inline SVG Menu Hamburger -->
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="drawer-close" id="drawer-close-btn">&times;</button>
+    <nav class="mobile-nav">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#showcase" class="mobile-link">Showcase</a>
+      <a href="#products" class="mobile-link">Products</a>
+      <a href="#about" class="mobile-link">About Us</a>
+      <a href="#delivery-map" class="mobile-link">Logistics Vector</a>
+      <a href="#contact" class="mobile-link">Reach Out</a>
+      <a href="#products" class="btn btn-drawer mt-2">Explore Blueprint</a>
+    </nav>
+  </div>
+
+  <!-- Hero Slider Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-slider" id="hero-slider">
+      
+      <!-- Slide 1: Royal Velvet Bed -->
+      <div class="slide active" data-theme="sage" data-index="0">
+        <div class="slide-content-wrapper">
+          <div class="slide-info">
+            <span class="badge badge-sage">Blueprint Specs: Bed-01</span>
+            <h1 class="slide-title">Royal Velvet <br><span class="highlight">Bed Suite</span></h1>
+            <p class="slide-description">Draped in deep indigo velvet and anchored with brushed brass base vectors. Click "Toggle 3D Explode" to witness component spacing alignment.</p>
+            <div class="slide-specs">
+              <div class="spec-item">
+                <span class="spec-val">Velvet Bed</span>
+                <span class="spec-lbl">Type</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">King / Queen</span>
+                <span class="spec-lbl">Sizes</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">$2,499</span>
+                <span class="spec-lbl">MSRP</span>
+              </div>
+            </div>
+            <div class="slide-actions">
+              <button class="btn btn-primary btn-glow-sage btn-explode">Toggle 3D Explode</button>
+              <a href="#products" class="btn btn-secondary">Technical Data</a>
+            </div>
+          </div>
+          
+          <div class="slide-visual">
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card border-sage">
+                <div class="card-bg-glow glow-sage"></div>
+                <!-- 3D Pop Out Elements -->
+                <div class="parallax-layer depth-back">
+                  <div class="orbiting-circle border-glow-sage"></div>
+                </div>
+                
+                <!-- Exploded Components Frame -->
+                <div class="exploded-container" id="explode-bed">
+                  <div class="explode-layer base-layer" data-label="Support Base">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=1000" alt="Support Base" class="product-3d-img sub-component shadow-filter">
+                  </div>
+                  <div class="explode-layer frame-layer" data-label="Wooden Frame">
+                    <div class="wireframe-overlay"></div>
+                  </div>
+                  <div class="explode-layer cushion-layer" data-label="Velvet Mattress">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=1000" alt="Velvet Mattress" class="product-3d-img sub-component shadow-filter">
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Solid Oak Dining Table -->
+      <div class="slide" data-theme="copper" data-index="1">
+        <div class="slide-content-wrapper">
+          <div class="slide-info">
+            <span class="badge badge-copper">Blueprint Specs: TBL-02</span>
+            <h1 class="slide-title">Minimalist Oak <br><span class="highlight">Dining Table</span></h1>
+            <p class="slide-description">Crafted from a single live-edge slab of solid European oak. Designed to anchor spaces with warm, natural textures and copper brackets.</p>
+            <div class="slide-specs">
+              <div class="spec-item">
+                <span class="spec-val">Solid Oak</span>
+                <span class="spec-lbl">Wood Type</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">6 - 8 Seater</span>
+                <span class="spec-lbl">Capacity</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">$1,850</span>
+                <span class="spec-lbl">MSRP</span>
+              </div>
+            </div>
+            <div class="slide-actions">
+              <button class="btn btn-primary btn-glow-copper btn-explode">Toggle 3D Explode</button>
+              <a href="#products" class="btn btn-secondary">Technical Data</a>
+            </div>
+          </div>
+          
+          <div class="slide-visual">
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card border-copper">
+                <div class="card-bg-glow glow-copper"></div>
+                <div class="parallax-layer depth-back">
+                  <div class="orbiting-circle border-glow-copper"></div>
+                </div>
+                
+                <!-- Exploded Components Frame -->
+                <div class="exploded-container" id="explode-table">
+                  <div class="explode-layer base-layer" data-label="Base Legs">
+                    <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&q=80&w=1000" alt="Base Legs" class="product-3d-img sub-component shadow-filter">
+                  </div>
+                  <div class="explode-layer frame-layer" data-label="Copper Brackets">
+                    <div class="wireframe-overlay"></div>
+                  </div>
+                  <div class="explode-layer cushion-layer" data-label="Oak Top">
+                    <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&q=80&w=1000" alt="Oak Top" class="product-3d-img sub-component shadow-filter">
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Aura Brass Arch Lamp -->
+      <div class="slide" data-theme="indigo" data-index="2">
+        <div class="slide-content-wrapper">
+          <div class="slide-info">
+            <span class="badge badge-indigo">Blueprint Specs: LMP-03</span>
+            <h1 class="slide-title">Aura Brass <br><span class="highlight">Arch Lamp</span></h1>
+            <p class="slide-description">Project a full warm spectrum ring of light. Structured with a heavy brushed brass neck and weighted green marble counter-balance.</p>
+            <div class="slide-specs">
+              <div class="spec-item">
+                <span class="spec-val">Brushed Brass</span>
+                <span class="spec-lbl">Material</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">Dimmable LED</span>
+                <span class="spec-lbl">Control</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">$490</span>
+                <span class="spec-lbl">MSRP</span>
+              </div>
+            </div>
+            <div class="slide-actions">
+              <button class="btn btn-primary btn-glow-indigo btn-explode">Toggle 3D Explode</button>
+              <a href="#products" class="btn btn-secondary">Technical Data</a>
+            </div>
+          </div>
+          
+          <div class="slide-visual">
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card border-indigo">
+                <div class="card-bg-glow glow-indigo"></div>
+                <div class="parallax-layer depth-back">
+                  <div class="orbiting-circle border-glow-indigo"></div>
+                </div>
+                
+                <!-- Exploded Components Frame -->
+                <div class="exploded-container" id="explode-lamp">
+                  <div class="explode-layer base-layer" data-label="Marble Base">
+                    <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=1000" alt="Marble Base" class="product-3d-img sub-component shadow-filter">
+                  </div>
+                  <div class="explode-layer frame-layer" data-label="Brass Stem">
+                    <div class="wireframe-overlay"></div>
+                  </div>
+                  <div class="explode-layer cushion-layer" data-label="Aura Diffuser">
+                    <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=1000" alt="Aura Diffuser" class="product-3d-img sub-component shadow-filter">
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Terracotta Sofa Lounge -->
+      <div class="slide" data-theme="lime" data-index="3">
+        <div class="slide-content-wrapper">
+          <div class="slide-info">
+            <span class="badge badge-lime">Blueprint Specs: SF-04</span>
+            <h1 class="slide-title">Terracotta <br><span class="highlight">Sofa Lounge</span></h1>
+            <p class="slide-description">Elegant organic curves draped in super-vibrant Terracotta linen. Formed with an internal posture-adaptive memory foam core.</p>
+            <div class="slide-specs">
+              <div class="spec-item">
+                <span class="spec-val">Linen Blend</span>
+                <span class="spec-lbl">Material</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">Curved modular</span>
+                <span class="spec-lbl">Structure</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">$1,999</span>
+                <span class="spec-lbl">MSRP</span>
+              </div>
+            </div>
+            <div class="slide-actions">
+              <button class="btn btn-primary btn-glow-lime btn-explode">Toggle 3D Explode</button>
+              <a href="#products" class="btn btn-secondary">Technical Data</a>
+            </div>
+          </div>
+          
+          <div class="slide-visual">
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card border-lime">
+                <div class="card-bg-glow glow-lime"></div>
+                <div class="parallax-layer depth-back">
+                  <div class="orbiting-circle border-glow-lime"></div>
+                </div>
+                
+                <!-- Exploded Components Frame -->
+                <div class="exploded-container" id="explode-sofa">
+                  <div class="explode-layer base-layer" data-label="Hardwood Base">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1000" alt="Hardwood Base" class="product-3d-img sub-component shadow-filter">
+                  </div>
+                  <div class="explode-layer frame-layer" data-label="Linen Padding">
+                    <div class="wireframe-overlay"></div>
+                  </div>
+                  <div class="explode-layer cushion-layer" data-label="Foam Seat">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1000" alt="Foam Seat" class="product-3d-img sub-component shadow-filter">
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Controls -->
+      <button class="slider-arrow arrow-prev" id="slider-prev" aria-label="Previous Slide">
+        <!-- SVG Left Arrow -->
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button class="slider-arrow arrow-next" id="slider-next" aria-label="Next Slide">
+        <!-- SVG Right Arrow -->
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+      
+      <!-- Slider Dots / Progress -->
+      <div class="slider-dots-container" id="slider-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats Bar -->
+  <section class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-box">
+        <h3 class="stat-number" data-target="45">0</h3>
+        <p class="stat-label">Countries Operating In</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-box">
+        <h3 class="stat-number" data-target="250">0</h3>
+        <p class="stat-label">Happy Customers (K+)</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-box">
+        <h3 class="stat-number" data-target="15">0</h3>
+        <p class="stat-label">International Design Awards</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-box">
+        <h3 class="stat-number" data-target="100">0</h3>
+        <p class="stat-label">Carbon Neutral (%)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Section (Dedicated 3D Showcase Spotlight) -->
+  <section id="showcase" class="showcase-section section-padding">
+    <div class="container section-header text-center">
+      <span class="section-subtitle">Blueprint Showcase</span>
+      <h2 class="section-title">3D Interactive <span class="highlight-text">Design Spotlight</span></h2>
+      <p class="section-description">Inspect our vanguard architectural concepts. Click on any spotlight tile below to explore dynamic material compositions, exploded vector geometry, and instant cart integration.</p>
+    </div>
+    <div class="container showcase-grid">
+      <div class="showcase-card border-sage">
+        <div class="card-glow-bg glow-sage"></div>
+        <div class="showcase-visual">
+          <img src="images/epoxy_table.png" alt="River Table Blueprint" class="showcase-img">
+          <span class="showcase-tag">Spotlight #01</span>
+        </div>
+        <div class="showcase-info">
+          <h3>Handcrafted Live-Edge River Matrix</h3>
+          <p>Organic solid walnut slabs fused with bioluminescent sea-cyan resin vectors. High-density acoustic and scratch-proof finish.</p>
+          <div class="showcase-actions">
+            <span class="showcase-price">$3,800</span>
+            <button class="btn btn-primary btn-add-cart-direct" data-name="Epoxy Live-Edge River Table" data-price="3800" data-img="images/epoxy_table.png">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="showcase-card border-indigo">
+        <div class="card-glow-bg glow-indigo"></div>
+        <div class="showcase-visual">
+          <img src="images/suspended_pod.png" alt="Suspended Pod Blueprint" class="showcase-img">
+          <span class="showcase-tag">Spotlight #02</span>
+        </div>
+        <div class="showcase-info">
+          <h3>Biophilic Suspended Pod Suite</h3>
+          <p>Structural steel outer skeletal framework holding hand-woven rattan pods with orthopedic foam core linings.</p>
+          <div class="showcase-actions">
+            <span class="showcase-price">$980</span>
+            <button class="btn btn-primary btn-add-cart-direct" data-name="Biophilic Suspended Pod" data-price="980" data-img="images/suspended_pod.png">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section id="products" class="products-section section-padding">
+    <div class="section-header container">
+      <span class="section-subtitle">Exquisite Selection</span>
+      <h2 class="section-title">Vibrant & Modern <span class="highlight-text">Catalog</span></h2>
+      <p class="section-description">A curated selection of our finest masterpieces. Use the filter tabs below to navigate our vibrant products styled with stunning precision.</p>
+      
+      <!-- Filter Controls -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Blueprints</button>
+        <button class="filter-btn" data-filter="beds">Beds</button>
+        <button class="filter-btn" data-filter="sofas">Sofas</button>
+        <button class="filter-btn" data-filter="tables">Dining Tables</button>
+        <button class="filter-btn" data-filter="lighting">Lighting</button>
+        <button class="filter-btn" data-filter="shelves">Pods & Shelves</button>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid container">
+      
+      <!-- Product 1: Emerald Velvet Bed -->
+      <div class="product-card" data-category="beds">
+        <div class="product-card-inner border-sage">
+          <div class="card-glow-bg glow-sage"></div>
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=600" alt="Emerald Velvet Bed" class="product-img">
+            <span class="product-tag tag-new">New Suite</span>
+          </div>
+          <div class="product-details">
+            <div class="product-meta">
+              <span class="product-cat">Beds [BED-01]</span>
+              <div class="rating">
+                <svg class="star-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 4.9
+              </div>
+            </div>
+            <h3 class="product-name">Emerald Tufted Bed</h3>
+            <p class="product-desc">Luxury upholstered bed featuring hand-tufted headboard details in plush emerald velvet.</p>
+            <div class="product-price-row">
+              <span class="product-price">$2,299</span>
+              <button class="btn-buy" aria-label="Add to cart">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2: Oak Base Glass Table -->
+      <div class="product-card" data-category="tables">
+        <div class="product-card-inner border-copper">
+          <div class="card-glow-bg glow-copper"></div>
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=600" alt="Oak Base Glass Table" class="product-img">
+            <span class="product-tag tag-trending">Trending</span>
+          </div>
+          <div class="product-details">
+            <div class="product-meta">
+              <span class="product-cat">Dining Tables [TBL-02]</span>
+              <div class="rating">
+                <svg class="star-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 4.8
+              </div>
+            </div>
+            <h3 class="product-name">Oak Base Glass Table</h3>
+            <p class="product-desc">Solid oak supporting structure paired with glowing custom tempered glass surface.</p>
+            <div class="product-price-row">
+              <span class="product-price">$1,450</span>
+              <button class="btn-buy" aria-label="Add to cart">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3: Ring Halo Floor Lamp -->
+      <div class="product-card" data-category="lighting">
+        <div class="product-card-inner border-indigo">
+          <div class="card-glow-bg glow-indigo"></div>
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=600" alt="Ring Halo Floor Lamp" class="product-img">
+          </div>
+          <div class="product-details">
+            <div class="product-meta">
+              <span class="product-cat">Lighting [LMP-03]</span>
+              <div class="rating">
+                <svg class="star-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 4.7
+              </div>
+            </div>
+            <h3 class="product-name">Halo Ring Floor Lamp</h3>
+            <p class="product-desc">Minimalist gold floor lamp projecting a full custom spectrum ring of light against walls.</p>
+            <div class="product-price-row">
+              <span class="product-price">$340</span>
+              <button class="btn-buy" aria-label="Add to cart">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4: Navy Velvet Sofa -->
+      <div class="product-card" data-category="sofas">
+        <div class="product-card-inner border-navy">
+          <div class="card-glow-bg glow-navy"></div>
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=600" alt="Navy Velvet Sofa" class="product-img">
+          </div>
+          <div class="product-details">
+            <div class="product-meta">
+              <span class="product-cat">Sofas [SF-04]</span>
+              <div class="rating">
+                <svg class="star-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 5.0
+              </div>
+            </div>
+            <h3 class="product-name">Navy Modular Sofa</h3>
+            <p class="product-desc">Dynamic layout configurations with soft navy velvet and density foam core support.</p>
+            <div class="product-price-row">
+              <span class="product-price">$2,899</span>
+              <button class="btn-buy" aria-label="Add to cart">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5: Epoxy Resin Live-Edge River Table (NEW) -->
+      <div class="product-card" data-category="tables">
+        <div class="product-card-inner border-lime">
+          <div class="card-glow-bg glow-lime"></div>
+          <div class="product-image-container">
+            <img src="images/epoxy_table.png" alt="Epoxy Live-Edge River Table" class="product-img">
+            <span class="product-tag tag-new">Exclusive</span>
+          </div>
+          <div class="product-details">
+            <div class="product-meta">
+              <span class="product-cat">Dining Tables [TBL-05]</span>
+              <div class="rating">
+                <svg class="star-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 4.9
+              </div>
+            </div>
+            <h3 class="product-name">Epoxy Live-Edge River Table</h3>
+            <p class="product-desc">Live-edge Walnut slabs linked by glowing turquoise epoxy resin. A masterclass in organic contrast.</p>
+            <div class="product-price-row">
+              <span class="product-price">$3,800</span>
+              <button class="btn-buy" aria-label="Add to cart">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6: Biophilic Suspended Pod Chair (NEW) -->
+      <div class="product-card" data-category="shelves">
+        <div class="product-card-inner border-indigo">
+          <div class="card-glow-bg glow-indigo"></div>
+          <div class="product-image-container">
+            <img src="images/suspended_pod.png" alt="Biophilic Suspended Pod Chair" class="product-img">
+            <span class="product-tag tag-trending">Modernist</span>
+          </div>
+          <div class="product-details">
+            <div class="product-meta">
+              <span class="product-cat">Pods & Shelves [POD-06]</span>
+              <div class="rating">
+                <svg class="star-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 5.0
+              </div>
+            </div>
+            <h3 class="product-name">Biophilic Suspended Pod</h3>
+            <p class="product-desc">Suspended steel outline encasing comfortable organic woven rattan, fitted with memory foam cushions.</p>
+            <div class="product-price-row">
+              <span class="product-price">$980</span>
+              <button class="btn-buy" aria-label="Add to cart">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7: Geometric Copper Bookshelf (NEW) -->
+      <div class="product-card" data-category="shelves">
+        <div class="product-card-inner border-copper">
+          <div class="card-glow-bg glow-copper"></div>
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&q=80&w=600" alt="Geometric Copper Bookshelf" class="product-img">
+          </div>
+          <div class="product-details">
+            <div class="product-meta">
+              <span class="product-cat">Pods & Shelves [SHF-07]</span>
+              <div class="rating">
+                <svg class="star-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 4.8
+              </div>
+            </div>
+            <h3 class="product-name">Geometric Copper Shelf</h3>
+            <p class="product-desc">Modular structural dividers made of burnished copper piping, supporting solid walnut shelving nodes.</p>
+            <div class="product-price-row">
+              <span class="product-price">$1,200</span>
+              <button class="btn-buy" aria-label="Add to cart">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8: Terracotta Lounge Armchair -->
+      <div class="product-card" data-category="sofas">
+        <div class="product-card-inner border-terracotta">
+          <div class="card-glow-bg glow-terracotta"></div>
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600" alt="Terracotta Lounge Armchair" class="product-img">
+            <span class="product-tag tag-new">New Accent</span>
+          </div>
+          <div class="product-details">
+            <div class="product-meta">
+              <span class="product-cat">Lounge / Chairs [CHR-08]</span>
+              <div class="rating">
+                <svg class="star-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 4.9
+              </div>
+            </div>
+            <h3 class="product-name">Terracotta Accent Chair</h3>
+            <p class="product-desc">Extra-vibrant terracotta accent chair that adds an immediate pop of style to any study room.</p>
+            <div class="product-price-row">
+              <span class="product-price">$450</span>
+              <button class="btn-buy" aria-label="Add to cart">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 9: Solid Oak Study Desk -->
+      <div class="product-card" data-category="tables">
+        <div class="product-card-inner border-sage">
+          <div class="card-glow-bg glow-sage"></div>
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=600" alt="Solid Oak Study Desk" class="product-img">
+          </div>
+          <div class="product-details">
+            <div class="product-meta">
+              <span class="product-cat">Tables & Desks [TBL-09]</span>
+              <div class="rating">
+                <svg class="star-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 4.6
+              </div>
+            </div>
+            <h3 class="product-name">Solid Oak Study Desk</h3>
+            <p class="product-desc">Minimalist writing desk with integrated storage and acoustic fabric partitions.</p>
+            <div class="product-price-row">
+              <span class="product-price">$1,150</span>
+              <button class="btn-buy" aria-label="Add to cart">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section section-padding">
+    <div class="container about-grid">
+      
+      <!-- Left: Timeline Content -->
+      <div class="about-content">
+        <span class="section-subtitle">Our Heritage</span>
+        <h2 class="section-title">The Past, Present, & <span class="highlight-text">Global Future</span></h2>
+        <p class="about-desc-main">VibraFurnish started with a singular, radical vision: furniture shouldn't just occupy space—it should elevate consciousness. By combining vibrant color theory, custom ergonomics, and premium materials, we craft products that redefine home aesthetic experiences.</p>
+        
+        <!-- Timeline -->
+        <div class="timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-dot bg-navy"></div>
+            <div class="timeline-date">1998 — THE PAST</div>
+            <h3 class="timeline-title">Bespoke Workshop</h3>
+            <p class="timeline-desc">Started as a small guild of three master carpenters in Florence, Italy, specializing in customized aniline leather armchairs and handcrafted hardwood dining vectors.</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot bg-gold"></div>
+            <div class="timeline-date">2012 — THE TRANSITION</div>
+            <h3 class="timeline-title">Vibrant Ergonomics</h3>
+            <p class="timeline-desc">Pioneered custom orthopedic frameworks coated in extra-vibrant fabrics, integrating sound-absorbing contours to create individual quiet zones in busy offices.</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot bg-emerald"></div>
+            <div class="timeline-date">2026 — THE PRESENT & BEYOND</div>
+            <h3 class="timeline-title">Globally Operating in 45+ Countries</h3>
+            <p class="timeline-desc">Now fully operating as a carbon-negative brand, delivering stunning modern furniture from automated smart facilities directly to homes worldwide in under 48 hours.</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Right: Asymmetric Technical Blueprint Gallery (3 Rows, Equal columns) -->
+      <div class="about-visual">
+        <div class="about-gallery-grid">
+          
+          <!-- Row 1, Col 1 -->
+          <div class="about-gallery-card border-navy">
+            <div class="card-glow-bg glow-navy"></div>
+            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=400&q=80" alt="Vanguard Studio" class="about-gallery-img">
+            <div class="about-card-info-grid">
+              <h4>Vanguard Studio</h4>
+            </div>
+          </div>
+          
+          <!-- Row 1, Col 2 -->
+          <div class="about-gallery-card border-emerald">
+            <div class="card-glow-bg glow-emerald"></div>
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=400&q=80" alt="Precision Assembly" class="about-gallery-img">
+            <div class="about-card-info-grid">
+              <h4>CNC Wood Milling</h4>
+            </div>
+          </div>
+
+          <!-- Row 2, Col 1 -->
+          <div class="about-gallery-card border-copper">
+            <div class="card-glow-bg glow-copper"></div>
+            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=400&q=80" alt="Material Selection" class="about-gallery-img">
+            <div class="about-card-info-grid">
+              <h4>Material Vectors</h4>
+            </div>
+          </div>
+
+          <!-- Row 2, Col 2 -->
+          <div class="about-gallery-card border-lime">
+            <div class="card-glow-bg glow-lime"></div>
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80" alt="Organic Weaving" class="about-gallery-img">
+            <div class="about-card-info-grid">
+              <h4>Bespoke Upholstery</h4>
+            </div>
+          </div>
+
+          <!-- Row 3, Col 1 -->
+          <div class="about-gallery-card border-navy">
+            <div class="card-glow-bg glow-navy"></div>
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=400&q=80" alt="Architectural Styling" class="about-gallery-img">
+            <div class="about-card-info-grid">
+              <h4>Curation Room</h4>
+            </div>
+          </div>
+
+          <!-- Row 3, Col 2 -->
+          <div class="about-gallery-card border-gold">
+            <div class="card-glow-bg glow-gold"></div>
+            <img src="images/logistics_center.png" alt="Blueprint Drafting" class="about-gallery-img">
+            <div class="about-card-info-grid">
+              <h4>Logistics Center</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive SVG Map / Delivery Routes Section -->
+  <section id="delivery-map" class="map-section section-padding">
+    <div class="container section-header text-center">
+      <span class="section-subtitle">Global Deliveries</span>
+      <h2 class="section-title">Interactive <span class="highlight-text">Logistics Footprint</span></h2>
+      <p class="section-description">We ship worldwide. Hover over any country node on the map to see transit times, operational logistics hubs, and active delivery routes traced in <span class="text-gold">Gold</span> and <span class="text-white">White</span>.</p>
+    </div>
+
+    <div class="map-container container">
+      <!-- Interactive SVG Map -->
+      <svg id="svg-world-map" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="neon-glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <filter id="neon-glow-white" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          
+          <linearGradient id="route-gold-white" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#dfb76c" />
+            <stop offset="50%" stop-color="#ffffff" />
+            <stop offset="100%" stop-color="#dfb76c" />
+          </linearGradient>
+        </defs>
+
+        <!-- Continent Outlines -->
+        <g id="map-continents" fill="#151522" stroke="#252538" stroke-width="1.5">
+          <path d="M 80 100 L 150 70 L 250 80 L 300 120 L 280 200 L 220 220 L 200 280 L 160 280 L 170 240 L 140 220 L 110 220 L 80 180 Z" />
+          <path d="M 200 290 L 240 290 L 280 320 L 310 380 L 270 470 L 250 470 L 220 380 L 190 320 Z" />
+          <path d="M 280 40 L 330 30 L 350 70 L 300 80 Z" />
+          <path d="M 450 100 L 520 80 L 560 110 L 590 110 L 600 150 L 560 170 L 540 230 L 580 280 L 580 340 L 550 400 L 510 400 L 480 310 L 460 270 L 490 220 L 450 170 L 430 140 Z" />
+          <path d="M 570 110 L 700 80 L 850 90 L 900 150 L 880 240 L 800 280 L 760 260 L 730 290 L 710 260 L 640 250 L 600 190 M 740 290 Z" />
+          <path d="M 780 340 L 850 350 L 870 390 L 830 420 L 770 390 Z" />
+          <path d="M 435 90 L 445 90 L 440 100 Z" />
+          <path d="M 865 140 L 875 160 L 870 180" stroke="#252538" stroke-width="2" fill="none" />
+        </g>
+
+        <!-- Delivery Routes -->
+        <g id="delivery-routes">
+          <path id="route-us" d="M 465 110 Q 350 90 220 150" fill="none" stroke="url(#route-gold-white)" stroke-width="2.5" stroke-dasharray="8, 6" class="animated-route" filter="url(#neon-glow-gold)" />
+          <path id="route-sa" d="M 465 110 Q 350 200 260 350" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="6, 6" class="animated-route" filter="url(#neon-glow-white)" />
+          <path id="route-jp" d="M 465 110 Q 660 70 870 160" fill="none" stroke="url(#route-gold-white)" stroke-width="2.5" stroke-dasharray="8, 6" class="animated-route" filter="url(#neon-glow-gold)" />
+          <path id="route-af" d="M 465 110 Q 530 250 550 390" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="6, 6" class="animated-route" filter="url(#neon-glow-white)" />
+          <path id="route-au" d="M 465 110 Q 650 300 810 380" fill="none" stroke="url(#route-gold-white)" stroke-width="2.5" stroke-dasharray="8, 6" class="animated-route" filter="url(#neon-glow-gold)" />
+        </g>
+
+        <!-- Map Hub Pins -->
+        <g id="map-pins">
+          <g class="map-pin" data-country="uk" transform="translate(465, 110)">
+            <circle class="pin-pulse" r="12" fill="#dfb76c" opacity="0.4" />
+            <circle class="pin-core" r="5" fill="#dfb76c" />
+          </g>
+          <g class="map-pin" data-country="usa" transform="translate(220, 150)">
+            <circle class="pin-pulse" r="10" fill="#ffffff" opacity="0.4" />
+            <circle class="pin-core" r="4" fill="#ffffff" />
+          </g>
+          <g class="map-pin" data-country="brazil" transform="translate(260, 350)">
+            <circle class="pin-pulse" r="10" fill="#dfb76c" opacity="0.4" />
+            <circle class="pin-core" r="4" fill="#dfb76c" />
+          </g>
+          <g class="map-pin" data-country="safrica" transform="translate(550, 390)">
+            <circle class="pin-pulse" r="10" fill="#ffffff" opacity="0.4" />
+            <circle class="pin-core" r="4" fill="#ffffff" />
+          </g>
+          <g class="map-pin" data-country="japan" transform="translate(870, 160)">
+            <circle class="pin-pulse" r="10" fill="#dfb76c" opacity="0.4" />
+            <circle class="pin-core" r="4" fill="#dfb76c" />
+          </g>
+          <g class="map-pin" data-country="australia" transform="translate(810, 380)">
+            <circle class="pin-pulse" r="10" fill="#ffffff" opacity="0.4" />
+            <circle class="pin-core" r="4" fill="#ffffff" />
+          </g>
+        </g>
+      </svg>
+
+      <!-- Map Tooltip Panel -->
+      <div id="map-tooltip" class="map-tooltip">
+        <h4 id="tooltip-title">Main Logistics Hub</h4>
+        <p id="tooltip-delivery">Transit Time: <strong>Direct Dispatch</strong></p>
+        <p id="tooltip-status"><span class="badge-dot status-active"></span> Core Operations Center</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Form Section -->
+  <section id="contact" class="contact-section section-padding">
+    <div class="container contact-grid">
+      
+      <!-- Contact Details -->
+      <div class="contact-info-panel">
+        <span class="section-subtitle">Reach Out</span>
+        <h2 class="section-title">Let's Craft Your <span class="highlight-text">Space</span></h2>
+        <p class="contact-intro">Whether you're looking to acquire custom modular units or want a complete vibrant renovation plan for corporate lounges, our design architects are ready.</p>
+        
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-icon bg-navy">
+              <!-- Inline SVG Phone Icon -->
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="contact-text">
+              <span>Call Operations</span>
+              <a href="tel:+18005558427">+1 (800) 555-VIBRA</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon bg-emerald">
+              <!-- Inline SVG Mail Icon -->
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-text">
+              <span>Write to Architects</span>
+              <a href="mailto:design@vibrafurnish.com">design@vibrafurnish.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon bg-gold">
+              <!-- Inline SVG Map Marker Icon -->
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-text">
+              <span>HQ Gallery Location</span>
+              <p>420 Neon Boulevard, Suite 500, Milan, Italy</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-social-prompt">
+          <p>Follow our global blueprint installations:</p>
+          <div class="social-row">
+            <a href="#" class="social-btn instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-btn pinterest" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.966 1.406-5.966s-.359-.72-.359-1.781c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.27 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.622 0 11.988-5.366 11.988-11.987C24.004 5.367 18.639 0 12.017 0z"></path></svg>
+            </a>
+            <a href="#" class="social-btn dribbble" aria-label="Dribbble">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.49-11.05 1-11.6 8.56"></path></svg>
+            </a>
+            <a href="#" class="social-btn behance" aria-label="Behance">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8.228 15.011c.544 0 .979-.115 1.306-.345.328-.23.492-.596.492-1.097 0-.466-.153-.807-.461-1.025-.308-.217-.743-.326-1.307-.326H5.214v2.793h3.014zm-.298-5.267c.451 0 .818-.103 1.1-.308.283-.206.425-.526.425-.961 0-.399-.133-.701-.399-.908-.266-.206-.641-.308-1.126-.308H5.214v2.485h2.716zM24 0v24H0V0h24zm-12.822 12.183c.691-.497 1.037-1.282 1.037-2.354 0-.847-.238-1.503-.714-1.968-.477-.466-1.179-.698-2.106-.698H4v10.669h4.943c1.016 0 1.792-.251 2.327-.753.535-.502.803-1.246.803-2.231 0-1.053-.298-1.875-.895-2.665zm10.741-2.584h-4.834c.032.748.271 1.325.719 1.731.447.406.994.609 1.64.609.843 0 1.455-.333 1.838-.997h1.996c-.34 1.157-.999 2.05-1.979 2.68-1.011.648-2.231.973-3.66.973-1.748 0-3.136-.541-4.164-1.623-1.028-1.082-1.543-2.518-1.543-4.307 0-1.801.503-3.238 1.51-4.312C16.273 6.873 17.618 6.33 19.3 6.33c1.7 0 3.014.512 3.94 1.536.927 1.024 1.385 2.457 1.374 4.3h-.695zm-1.002-1.637c-.011-.692-.218-1.232-.622-1.619-.404-.388-.934-.582-1.59-.582-.626 0-1.146.196-1.559.589-.413.393-.655.93-.726 1.612h4.497zm-1.884-2.617h-2.978V4.5h2.978v.845z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-panel border-navy">
+        <div class="card-glow-bg glow-navy"></div>
+        <h3>Send a Message</h3>
+        <p>Response latency: under 4 hours</p>
+        
+        <form id="furniture-contact-form" class="mt-2">
+          <div class="form-row">
+            <div class="input-group">
+              <input type="text" id="form-name" required placeholder=" ">
+              <label for="form-name">Your Full Name</label>
+              <span class="bar"></span>
+            </div>
+            <div class="input-group">
+              <input type="email" id="form-email" required placeholder=" ">
+              <label for="form-email">Email Address</label>
+              <span class="bar"></span>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <input type="text" id="form-subject" required placeholder=" ">
+            <label for="form-subject">Subject</label>
+            <span class="bar"></span>
+          </div>
+
+          <div class="input-group">
+            <select id="form-product-interest" required>
+              <option value="" disabled selected hidden></option>
+              <option value="bed">Royal Velvet Bed Suite [BED-01]</option>
+              <option value="table">Minimalist Oak Dining Table [TBL-02]</option>
+              <option value="lamp">Aura Brass Arch Lamp [LMP-03]</option>
+              <option value="sofa">Terracotta Sofa Lounge [SF-04]</option>
+              <option value="epoxy-table">Epoxy River Dining Table [TBL-05]</option>
+              <option value="pod">Suspended Pod Chair [POD-06]</option>
+              <option value="shelf">Geometric Copper Shelf [SHF-07]</option>
+              <option value="custom">Custom Architectural Blueprint</option>
+            </select>
+            <label class="select-label" for="form-product-interest">Interested Design</label>
+            <span class="bar"></span>
+          </div>
+
+          <div class="input-group">
+            <textarea id="form-message" rows="5" required placeholder=" "></textarea>
+            <label for="form-message">Describe your design blueprint...</label>
+            <span class="bar"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit btn-glow-navy w-100">Send Design Request</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      
+      <!-- Footer Column 1: Brand details -->
+      <div class="footer-col footer-brand-col">
+        <a href="#" class="logo">
+          <span class="logo-accent">VIBRA</span>FURNISH
+        </a>
+        <p class="footer-brand-desc">Engineered for architectural excellence. Crafting extra-vibrant furniture that blends functional comfort with cutting-edge 3D exploded blueprint design.</p>
+        <p class="operating-info">Currently operating in <strong>45+ countries</strong> with dedicated hubs in Europe, North America, Asia-Pacific, and South Africa.</p>
+        <div class="social-row mt-2">
+          <a href="#" class="social-icon-btn facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+          </a>
+          <a href="#" class="social-icon-btn twitter" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+          </a>
+          <a href="#" class="social-icon-btn instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-icon-btn linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Column 2: Products Quick Links -->
+      <div class="footer-col">
+        <h4>Design Blueprints</h4>
+        <ul class="footer-links">
+          <li><a href="#products">Royal Velvet Bed Suite [BED-01]</a></li>
+          <li><a href="#products">Solid Oak Dining Table [TBL-02]</a></li>
+          <li><a href="#products">Aura Brass Arch Lamp [LMP-03]</a></li>
+          <li><a href="#products">Terracotta Sofa Lounge [SF-04]</a></li>
+          <li><a href="#products">Epoxy Resin River Table [TBL-05]</a></li>
+          <li><a href="#products">Suspended Egg Pod Chair [POD-06]</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 3: Support Links -->
+      <div class="footer-col">
+        <h4>Need Support?</h4>
+        <ul class="footer-links">
+          <li><a href="#contact">Order Tracking</a></li>
+          <li><a href="#delivery-map">Shipping & Logistics</a></li>
+          <li><a href="#contact">Architect Consultation</a></li>
+          <li><a href="#about">Corporate Partnership</a></li>
+          <li><a href="#contact">Sustainability Blueprints</a></li>
+          <li><a href="#contact">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 4: Newsletter -->
+      <div class="footer-col footer-newsletter-col">
+        <h4>Stay Inspired</h4>
+        <p>Subscribe to our catalog releases and exclusive design guides.</p>
+        <form class="newsletter-form mt-2" id="footer-newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" placeholder="Your Email Address" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </div>
+        </form>
+        <div class="footer-payment-icons mt-3">
+          <!-- Inline SVG Payment Cards -->
+          <!-- Visa -->
+          <svg viewBox="0 0 36 24" width="36" height="24"><rect width="36" height="24" rx="3" fill="#1434CB"></rect><path d="M10 7 L12 17 L14 17 L12 7 Z" fill="#FFCC00"></path></svg>
+          <!-- Mastercard -->
+          <svg viewBox="0 0 36 24" width="36" height="24"><rect width="36" height="24" rx="3" fill="#333"></rect><circle cx="15" cy="12" r="7" fill="#EB001B"></circle><circle cx="21" cy="12" r="7" fill="#F79E1B" opacity="0.8"></circle></svg>
+          <!-- Apple Pay -->
+          <svg viewBox="0 0 36 24" width="36" height="24"><rect width="36" height="24" rx="3" fill="#FFF" stroke="#DDD"></rect><path d="M18 7 C16 7 15 8 15 10 C15 12 16 13 18 13 C20 13 21 12 21 10 C21 8 20 7 18 7 Z" fill="#000"></path></svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 VibraFurnish Inc. All rights reserved. | <a href="#">Privacy Blueprint</a> | <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <!-- Custom Logic JavaScript -->
+  <script src="script.js"></script>
+
+  <!-- Shopping Cart Slide-Over Drawer -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Blueprint Shopping Cart (<span id="cart-drawer-count">0</span>)</h3>
+      <button class="cart-drawer-close" id="cart-drawer-close">&times;</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-items">
+      <p class="empty-cart-msg">Your blueprint shopping cart is currently empty.</p>
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>Cart Total:</span>
+        <span class="cart-total-price" id="cart-total-price">$0</span>
+      </div>
+      <button class="btn btn-primary w-100 btn-checkout" id="btn-checkout">Proceed to Checkout</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-toast" id="cart-toast">Item added to cart!</div>
+</body>
+</html>
